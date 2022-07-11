@@ -1,0 +1,534 @@
+<div class="container-fluid">
+  <div class="d-flex justify-content-center">
+    <div>
+      <table style="margin-left: 40%;">
+        <tr>
+          <td>
+            <h1 style="text-align: center;"><b>Skill Matrix</b></h1>
+          </td>
+          <td>
+            <img src="assets\logo\logo.png" style="right: 0pt;padding-left: 70%;">
+          </td>
+        </tr>
+           
+      </table>
+      
+      <table style="margin-left: 15%;">
+        <tr>
+          <th><span>Employee ID *</span></th>
+          <th><span>Name *</span></th>
+          <th><span>Project Name *</span></th>
+        </tr>
+        <tr>
+          <td><input type="text" [(ngModel)]="empid" placeholder="Enter ID" /></td>
+          <td><input type="text" [(ngModel)]="name" placeholder="Enter Name" /></td>
+          <td><input type="text" [(ngModel)]="projectName" required placeholder="Enter Your Project Name"/></td>
+        </tr>
+          <br>
+        <tr>
+          <td>
+            <div>
+              <span><b>Primary Skill 1 *</b></span><br>
+              <select [(ngModel)]="chosenModpri1" (ngModelChange)="primodo1()" id="selectid" class="form-control-mb-12"
+                style="width: 250px;height: 35px; margin-right: 30px;">
+                <option value="Frontend">Frontend</option>
+                <option value="Backend">Backend</option>
+                <option value="Database">Database</option>
+                <option value="Full Stack">Full Stack</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Software Testing">Software Testing</option>
+                <option value="DevOps">DevOps</option>
+                <option value="Cloud">Cloud</option>
+                <option value="Recruitment">Recruitment</option>
+                <option value="PMO">PMO</option>
+                <option value="HR">HR</option>
+                <option value="L & D">L & D</option>
+                <option value="BA">BA</option>
+                <option value="Admin">Admin</option>
+                <option value="Finance">Finance</option>
+                <option value="IT">IT</option>
+                <option value="Other">Other</option>
+              </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+          </td>
+
+          <td>
+            <div>
+              <span><b>Level *</b></span><br>
+              <select [(ngModel)]="chosenModlp1" (ngModelChange)="modolp1()" id="selectid" class="form-control-mb-12"
+                style="width: 250px;height: 35px;margin-right: 30px;">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Expert">Expert</option>
+              </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+          </td>
+
+          <td>
+            <div *ngIf="divfrontendpri1">
+              <span>Mention Frontend Skills</span><br>
+                (e.g. Javascript, HTML, HTML5, CSS, Angular JS, Bootstrap, Ajax, VueJS, React JS, Popper JS, Knockout JS,
+                Express JS, Ionic, Backbone JS, Chai JS, Mocha JS, Redux JS, etc.)<br>
+              <input type="text" [(ngModel)]="primarySkill1details" required placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divbackendpri1">
+              <span>Mention Backend Skills</span><br>
+                (e.g. Java, Java Spring, Java Hibernate, Java Grail, Java Play, Java Spring Boot, Python, Node
+                JS, Ruby, C Sharp C#, Dot Net, Django, Ruby on Rails test, Express JS, Laravel, Python Pyramid, etc.)<br>
+              <input type="text" [(ngModel)]="primarySkill1details" required placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divdatabasepri1">
+              <span>Mention Database Skills</span><br>
+                (e.g. SQL, No SQL, PL SQL, Oracle SQL/No SQL, MySQL, Redis, Oracle, MongoDB, postgresql, Amazon
+                RDS, Cassandra, Hbase, SQOOP, Amazon Aurora, Amazon Dynamo, etc.)<br>
+              <input type="text" [(ngModel)]="primarySkill1details" required placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divfullstackpri1">
+              <span>Mention Full Stack Skills</span><br>
+                (e.g. Java Full Stack, C Sharp Full Stack, PHP Full Stack, MEAN Stack, MERN Stack, Django
+                Stack, Ruby on Rails, etc.)<br>
+              <input type="text" [(ngModel)]="primarySkill1details" required placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divdatasciencepri1">
+              <span>Mention Data Science Skills</span><br>
+                (e.g. SAS, Python, R, Hadoop, Scala, Python Tensorflow, DAX, Big Data, Power BI, Apache
+                Spark, Pandas, Machine Learning, etc.)<br>
+              <input type="text" [(ngModel)]="primarySkill1details" required placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divtestingpri1">
+              <span>Mention Testing Skills</span><br>
+                (e.g. JMeter test, Automation testing, Security testing, Loadrunner test, ELT testing, Jasmine
+                test, Pyunit test, Neoload test, Mockito test, Cucumber test, Mocha test, Puppeteer test, Qunit test, SoapUI
+                test, etc.)<br>
+              <input type="text" [(ngModel)]="primarySkill1details" required placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divdevopspri1">
+              <span>Mention DevOps Skills</span><br>
+                (e.g. jenkisChef, Puppet, Ubuntu, MS Azure, Unix Shell, Linux Shell, AWS(Amazon Web
+                Services), Git, Bash, Docker, Ansible, Mercurial, etc.)<br>
+              <input type="text" [(ngModel)]="primarySkill1details" required placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divcloudpri1">
+              <span>Mention Cloud Skills</span><br>
+                (e.g. AWS, Azure, Google cloud, etc.)<br>
+              <input type="text" [(ngModel)]="primarySkill1details" required placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divotherpri1">
+              <span>Mention Respective Skills</span><br>
+              <input type="text" [(ngModel)]="primarySkill1details" required placeholder="Enter technologies you know">
+            </div>
+          </td>
+        </tr>
+<br>
+        <tr>
+          <td>
+            <div>
+              <span><b>Primary Skill 2</b></span><br>
+              <select [(ngModel)]="chosenModpri2" (ngModelChange)="primodo2()" id="selectid" class="form-control-mb-12"
+                style="width: 250px;height: 35px;margin-right: 30px;">
+                <option value="Frontend">Frontend</option>
+                <option value="Backend">Backend</option>
+                <option value="Database">Database</option>
+                <option value="Full Stack">Full Stack</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Software Testing">Software Testing</option>
+                <option value="DevOps">DevOps</option>
+                <option value="Cloud">Cloud</option>
+                <option value="Recruitment">Recruitment</option>
+                <option value="PMO">PMO</option>
+                <option value="HR">HR</option>
+                <option value="L & D">L & D</option>
+                <option value="BA">BA</option>
+                <option value="Admin">Admin</option>
+                <option value="Finance">Finance</option>
+                <option value="IT">IT</option>
+                <option value="Other">Other</option>
+              </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+          </td>
+
+          <td>
+            <div>
+              <span><b>Level</b></span><br>
+              <select [(ngModel)]="chosenModlp2" (ngModelChange)="modolp2()" id="selectid" class="form-control-mb-12"
+                style="width: 250px;height: 35px;margin-right: 30px;">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Expert">Expert</option>
+              </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+          </td>
+
+          <td>
+            <div *ngIf="divfrontendpri2">
+              <span>Mention Frontend Skills</span><br>
+              (e.g. Javascript, HTML, HTML5, CSS, Angular JS, Bootstrap, Ajax, VueJS, React JS, Popper JS, Knockout JS,
+              Express JS, Ionic, Backbone JS, Chai JS, Mocha JS, Redux JS, etc.)<br>
+              <input type="text" [(ngModel)]="primarySkill2details" required placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divbackendpri2">
+              <span>Mention Backend Skills</span><br>
+              (e.g. Java, Java Spring, Java Hibernate, Java Grail, Java Play, Java Spring Boot, Python, Node
+              JS, Ruby, C Sharp C#, Dot Net, Django, Ruby on Rails test, Express JS, Laravel, Python Pyramid, etc.)<br>
+              <input type="text" [(ngModel)]="primarySkill2details" required placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divdatabasepri2">
+              <span>Mention Database Skills</span><br>
+              (e.g. SQL, No SQL, PL SQL, Oracle SQL/No SQL, MySQL, Redis, Oracle, MongoDB, postgresql, Amazon
+              RDS, Cassandra, Hbase, SQOOP, Amazon Aurora, Amazon Dynamo, etc.)<br>
+              <input type="text" [(ngModel)]="primarySkill2details" required placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divfullstackpri2">
+              <span>Mention Full Stack Skills</span><br>
+              (e.g. Java Full Stack, C Sharp Full Stack, PHP Full Stack, MEAN Stack, MERN Stack, Django
+              Stack, Ruby on Rails, etc.)<br>
+              <input type="text" [(ngModel)]="primarySkill2details" required placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divdatasciencepri2">
+              <span>Mention Data Science Skills</span><br>
+              (e.g. SAS, Python, R, Hadoop, Scala, Python Tensorflow, DAX, Big Data, Power BI, Apache
+              Spark, Pandas, Machine Learning, etc.)<br>
+              <input type="text" [(ngModel)]="primarySkill2details" required placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divtestingpri2">
+              <span>Mention Testing Skills</span><br>
+              (e.g. JMeter test, Automation testing, Security testing, Loadrunner test, ELT testing, Jasmine
+              test, Pyunit test, Neoload test, Mockito test, Cucumber test, Mocha test, Puppeteer test, Qunit test, SoapUI
+              test, etc.)<br>
+              <input type="text" [(ngModel)]="primarySkill2details" required placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divdevopspri2">
+              <span>Mention DevOps Skills</span><br>
+              (e.g. jenkisChef, Puppet, Ubuntu, MS Azure, Unix Shell, Linux Shell, AWS(Amazon Web
+              Services), Git, Bash, Docker, Ansible, Mercurial, etc.)<br>
+              <input type="text" [(ngModel)]="primarySkill2details" required placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divcloudpri2">
+              <span>Mention Cloud Skills</span><br>
+                (e.g. AWS, Azure, Google cloud, etc.)<br>
+              <input type="text" [(ngModel)]="primarySkill2details" required placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divotherpri2">
+              <span>Mention Respective Skills</span><br>
+              <input type="text" [(ngModel)]="primarySkill1details" required placeholder="Enter technologies you know">
+            </div>
+          </td>
+        </tr>
+<br>
+        <tr>
+          <td>
+            <div>
+              <span><b>Secondary Skill 1</b></span><br>
+              <select [(ngModel)]="chosenModsec1" (ngModelChange)="secmodo1()" id="selectid" class="form-control-mb-12"
+                style="width: 250px;height: 35px;margin-right: 30px;">
+                <option value="Frontend">Frontend</option>
+                <option value="Backend">Backend</option>
+                <option value="Database">Database</option>
+                <option value="Full Stack">Full Stack</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Software Testing">Software Testing</option>
+                <option value="DevOps">DevOps</option>
+                <option value="Cloud">Cloud</option>
+                <option value="Recruitment">Recruitment</option>
+                <option value="PMO">PMO</option>
+                <option value="HR">HR</option>
+                <option value="L & D">L & D</option>
+                <option value="BA">BA</option>
+                <option value="Admin">Admin</option>
+                <option value="Finance">Finance</option>
+                <option value="IT">IT</option>
+                <option value="Other">Other</option>
+              </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+          </td>
+
+          <td>
+            <div>
+              <span><b>Level </b></span><br>
+              <select [(ngModel)]="chosenModls1" (ngModelChange)="modols1()" id="selectid" class="form-control-mb-12"
+                style="width: 250px;height: 35px;margin-right: 30px;">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Expert">Expert</option>
+              </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+          </td>
+
+          <td style="width: 500px; height: 30px;">
+            <div *ngIf="divfrontendsec1">
+              <span>Mention Frontend Skills</span><br>
+              (e.g. Javascript, HTML, HTML5, CSS, Angular JS, Bootstrap, Ajax, VueJS, React JS, Popper JS, Knockout JS,
+              Express JS, Ionic, Backbone JS, Chai JS, Mocha JS, Redux JS, etc.)<br>
+              <input type="text" [(ngModel)]="secondarySkill1details" required
+                placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divbackendsec1">
+              <span>Mention Backend Skills</span><br>
+              (e.g. Java, Java Spring, Java Hibernate, Java Grail, Java Play, Java Spring Boot, Python, Node
+              JS, Ruby, C Sharp C#, Dot Net, Django, Ruby on Rails test, Express JS, Laravel, Python Pyramid, etc.)<br>
+              <input type="text" [(ngModel)]="secondarySkill1details" required
+                placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divdatabasesec1">
+              <span>Mention Database Skills</span><br>
+              (e.g. SQL, No SQL, PL SQL, Oracle SQL/No SQL, MySQL, Redis, Oracle, MongoDB, postgresql, Amazon
+              RDS, Cassandra, Hbase, SQOOP, Amazon Aurora, Amazon Dynamo, etc.)<br>
+              <input type="text" [(ngModel)]="secondarySkill1details" required
+                placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divfullstacksec1">
+              <span>Mention Full Stack Skills</span><br>
+              (e.g. Java Full Stack, C Sharp Full Stack, PHP Full Stack, MEAN Stack, MERN Stack, Django
+              Stack, Ruby on Rails, etc.)<br>
+              <input type="text" [(ngModel)]="secondarySkill1details" required
+                placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divdatasciencesec1">
+              <span>Mention Data Science Skills</span><br>
+              (e.g. SAS, Python, R, Hadoop, Scala, Python Tensorflow, DAX, Big Data, Power BI, Apache
+              Spark, Pandas, Machine Learning, etc.)<br>
+              <input type="text" [(ngModel)]="secondarySkill1details" required
+                placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divtestingsec1">
+              <span>Mention Testing Skills</span><br>
+              (e.g. JMeter test, Automation testing, Security testing, Loadrunner test, ELT testing, Jasmine
+              test, Pyunit test, Neoload test, Mockito test, Cucumber test, Mocha test, Puppeteer test, Qunit test, SoapUI
+              test, etc.)<br>
+              <input type="text" [(ngModel)]="secondarySkill1details" required
+                placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divdevopssec1">
+              <span>Mention DevOps Skills</span><br>
+              (e.g. jenkisChef, Puppet, Ubuntu, MS Azure, Unix Shell, Linux Shell, AWS(Amazon Web
+              Services), Git, Docker, Ansible, Mercurial, etc.)<br>
+              <input type="text" [(ngModel)]="secondarySkill1details" required
+                placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divcloudsec1">
+              <span>Mention Cloud Skills</span><br>
+                (e.g AWS, Azure, Google cloud, etc.)<br>
+              <input type="text" [(ngModel)]="secondarySkill1details" required
+                placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divothersec1">
+              <span>Mention Respective Skills</span><br>
+              <input type="text" [(ngModel)]="primarySkill1details" required placeholder="Enter technologies you know">
+            </div>
+          </td>
+        </tr>
+<br>
+        <tr>
+          <td>
+            <div>
+              <span><b>Secondary Skill 2</b></span><br>
+              <select [(ngModel)]="chosenModsec2" (ngModelChange)="secmodo2()" id="selectid" class="form-control-mb-12"
+                style="width: 250px;height: 35px;margin-right: 30px;">
+                <option value="Frontend">Frontend</option>
+                <option value="Backend">Backend</option>
+                <option value="Database">Database</option>
+                <option value="Full Stack">Full Stack</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Software Testing">Software Testing</option>
+                <option value="DevOps">DevOps</option>
+                <option value="Cloud">Cloud</option>
+                <option value="Recruitment">Recruitment</option>
+                <option value="PMO">PMO</option>
+                <option value="HR">HR</option>
+                <option value="L & D">L & D</option>
+                <option value="BA">BA</option>
+                <option value="Admin">Admin</option>
+                <option value="Finance">Finance</option>
+                <option value="IT">IT</option>
+                <option value="Other">Other</option>
+              </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+          </td>
+
+          <td>
+            <div>
+              <span><b>Level</b></span><br>
+              <select [(ngModel)]="chosenModls2" (ngModelChange)="modols2()" id="selectid" class="form-control-mb-12"
+                style="width: 250px;height: 35px;margin-right: 30px;">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Expert">Expert</option>
+              </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+          </td>
+
+          <td>
+            <div *ngIf="divfrontendsec2">
+              <span>Mention Frontend Skills</span><br>
+              (e.g. Javascript, HTML, HTML5, CSS, Angular JS, Bootstrap, Ajax, VueJS, React JS, Popper JS, Knockout JS,
+              Express JS, Ionic, Backbone JS, Chai JS, Mocha JS, Redux JS, etc.)<br>
+              <input type="text" [(ngModel)]="secondarySkill2details" required
+                placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divbackendsec2">
+              <span>Mention Backend Skills</span><br>
+              (e.g. Java, Java Spring, Java Hibernate, Java Grail, Java Play, Java Spring Boot, Python, Node
+              JS, Ruby, C Sharp C#, Dot Net, Django, Ruby on Rails test, Express JS, Laravel, Python Pyramid, etc.)<br>
+              <input type="text" [(ngModel)]="secondarySkill2details" required
+                placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divdatabasesec2">
+              <span>Mention Database Skills</span><br>
+              (e.g. SQL, No SQL, PL SQL, Oracle SQL/No SQL, MySQL, Redis, Oracle, MongoDB, postgresql, Amazon
+              RDS, Cassandra, Hbase, SQOOP, Amazon Aurora, Amazon Dynamo, etc.)<br>
+              <input type="text" [(ngModel)]="secondarySkill2details" required
+                placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divfullstacksec2">
+              <span>Mention Full Stack Skills</span><br>
+              (e.g. Java Full Stack, C Sharp Full Stack, PHP Full Stack, MEAN Stack, MERN Stack, Django
+              Stack, Ruby on Rails, etc.)<br>
+              <input type="text" [(ngModel)]="secondarySkill2details" required
+                placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divdatasciencesec2">
+              <span>Mention Data Science Skills</span><br>
+              (e.g. SAS, Python, R, Hadoop, Scala, Python Tensorflow, DAX, Big Data, Power BI, Apache
+              Spark, Pandas, Machine Learning, etc.)<br>
+              <input type="text" [(ngModel)]="secondarySkill2details" required
+                placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divtestingsec2">
+              <span>Mention Testing Skills</span><br>
+                (e.g. JMeter test, Automation testing, Security testing, Loadrunner test, ELT testing, Jasmine
+                test, Pyunit test, Neoload test, Mockito test, Cucumber test, Mocha test, Puppeteer test, Qunit test, SoapUI
+                test, etc.)<br>
+              <input type="text" [(ngModel)]="secondarySkill2details" required
+                placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divdevopssec2">
+              <span>Mention DevOps Skills</span><br>
+                (e.g. jenkisChef, Puppet, Ubuntu, MS Azure, Unix Shell, Linux Shell, AWS(Amazon Web
+                Services), Git, Docker, Ansible, Mercurial, etc.)<br>
+              <input type="text" [(ngModel)]="secondarySkill2details" required
+                placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divcloudsec2">
+              <span>Mention Cloud Skills</span><br>
+                (e.g AWS, Azure,Google cloud, etc.)<br>
+              <input type="text" [(ngModel)]="secondarySkill2details" required
+                placeholder="Enter technologies you know">
+            </div>
+            <div *ngIf="divothersec2">
+              <span>Mention Respective Skills</span><br>
+              <input type="text" [(ngModel)]="primarySkill1details" required placeholder="Enter technologies you know">
+            </div>
+          </td>
+        </tr>
+<br>
+        <tr>
+          <th><span>Total Work Experience</span></th>
+          <th><span>Experience in Atyeti</span></th>
+        </tr>
+        <tr>
+          <td><input type="text" [(ngModel)]="totalExperience" required placeholder="Your total Experience in years">
+          </td>
+          <td><input type="text" [(ngModel)]="experienceInAtyeti" required placeholder="Your Work Experience in Atyeti">
+          </td>
+        </tr>
+<br><br>
+        <h2><b>Aspiration</b></h2>
+        <tr>
+          <th><span>Short Term</span></th>
+          <th><span>Long Term</span></th>
+        </tr>
+        <tr>
+          <td><input type="text" [(ngModel)]="short" required placeholder="Your short term Aspiration">
+          </td>
+          <td><input type="text" [(ngModel)]="long" required placeholder="Your long term Aspiration">
+          </td>
+        </tr>
+<br>
+        <tr>
+          <th><span>Role you would like to undertake</span></th>
+          <th><span>Would you like to be SME(Subject Matter Expert) in Atyeti?</span></th>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <select [(ngModel)]="chosenModrole" (ngModelChange)="modorole()" id="selectid" class="form-control-mb-12"
+                style="width: 250px;height: 35px;margin-right: 30px;">
+                <option value="Individual">Individual Contributor</option>
+                <option value="Team">Manegerial Role</option>
+              </select>
+            </div>
+          </td>
+          <td><mat-radio-group
+            aria-labelledby="example-radio-group-label"
+            class="example-radio-group"
+            [(ngModel)]="SME">
+            <mat-radio-button class="example-radio-button" *ngFor="let response of response" [value]="response">
+              {{response}}&nbsp;&nbsp;
+            </mat-radio-button>
+          </mat-radio-group>
+          </td>
+        </tr>
+
+        <br><br>
+        <h2><b>Certifications</b></h2>
+
+        <tr>
+          <th><span>Certifications in Past</span></th>
+          <th><span>Certifications Source</span></th>
+        </tr>
+        <tr>
+          <td>1.<input type="text" [(ngModel)]="certificationInPast1" required
+              placeholder="Enter Your Certifications Name"></td>
+          <td>1.<input type="text" [(ngModel)]="certificationSource1" required
+            placeholder="Enter Your Certifications source/link"></td>
+        </tr>
+<br>
+        <tr>
+          <td>2.<input type="text" [(ngModel)]="certificationInPast2" required
+            placeholder="Enter Your Certifications Name"></td>
+          
+          <td>2.<input type="text" [(ngModel)]="certificationSource2" required
+              placeholder="Enter Your Certifications source/link"></td>
+        </tr>
+<br>
+        <tr>
+          <th><span>Certifications in Atyeti</span></th>
+          <th><span>Certifications Source</span></th>
+        </tr>
+        <tr>
+          <td>1.<input type="text" [(ngModel)]="certificationInAtyeti1" required
+              placeholder="Enter Your Certifications Name"></td>
+          <td>1.<input type="text" [(ngModel)]="certificationAtyetiSource1" required
+            placeholder="Enter Your Certifications source/link"></td>
+          
+        </tr>
+<br>
+        <tr>
+         
+        </tr>
+        <tr>
+          <td>2.<input type="text" [(ngModel)]="certificationInAtyeti2" required
+            placeholder="Enter Your Certifications Name"></td>
+          <td>2.<input type="text" [(ngModel)]="certificationAtyetiSource2" required
+              placeholder="Enter Your Certifications source/link"></td>
+        </tr>
+<br>
+        <tr>
+          <th><span>Mention ongoing certification (if any)</span></th>
+        </tr>
+        <tr>
+          <td><input type="text" [(ngModel)]="ongoingCertificate" required
+              placeholder="Enter Ongoing Certifications Name"></td>
+        </tr>
+<br>
+
+      </table>
+<br>
+      <div class="button text-center" style="padding: 3%;">
+        <input class="bg-success text-white" type="submit" value="Submit" (click)="onSubmit()" name="submit">
+      </div>
+
+    </div>
+
+  </div>
+</div>
